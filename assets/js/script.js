@@ -51,7 +51,13 @@ jQuery(function ($) {
 	/*	Portfolio Filtering Hook
 	/* =========================================================================  */
 
-	var filterizd = $('.filtr-container').filterizr({});
+
+    var filterizd;
+    try {
+        filterizd = $('.filtr-container').filterizr({});
+    } catch {
+
+    }
 	/* ========================================================================= */
 	/*	Testimonial Carousel
 	/* =========================================================================  */
@@ -146,6 +152,12 @@ jQuery(function ($) {
 			});
 		}
 	});
+
+    // Custom fix for email
+    var el = $('.tf-ion-ios-email-outline').parent().find('span');
+    var newText = el.text().replace(/(\w+@[\w\.]+)/, '<a href="mailto:$1">$1</a>');
+    console.log(newText);
+    el.replaceWith("Email: " + newText);
 
 });
 // End Jquery Function
@@ -285,10 +297,11 @@ function initialize() {
 		roadAtlasStyles, styledMapOptions);
 
 	map.mapTypes.set('roadatlas', usRoadMapType);
-	map.setMapTypeId('roadatlas');
+    map.setMapTypeId('roadatlas');
+
 }
 
-google.maps.event.addDomListener(window, "load", initialize);
+//google.maps.event.addDomListener(window, "load", initialize);
 
 /* ========================================================================= */
 /*	Staticman comments reply
