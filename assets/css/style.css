@@ -2391,4 +2391,9 @@ background-color: #FF6600
 .resp-sharing-button--telegram:hover {
   background-color: #4B97D1;}
 
+/* ABP */
+.video-button {
+    display: none !important;
+}
+
 /*# sourceMappingURL=maps/style.css.map */
