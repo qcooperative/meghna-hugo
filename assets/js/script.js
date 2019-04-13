@@ -157,7 +157,7 @@ jQuery(function ($) {
     var el = $('.tf-ion-ios-email-outline').parent().find('span');
     var newText = el.text().replace(/(\w+@[\w\.]+)/, '<a href="mailto:$1">$1</a>');
     console.log(newText);
-    el.replaceWith("Email: " + newText);
+    el.replaceWith(newText);
 
 });
 // End Jquery Function
