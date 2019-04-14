@@ -1141,6 +1141,14 @@ a:hover {
   margin-bottom: 0;
 }
 
+@media (min-width: 768px) {
+  .skill-bar p {
+    font-style: italic;
+    font-size: 30px;
+    vertical-align: middle;
+  }
+}
+
 .skill-bar p span {
   font-style: italic;
   font-size: 30px;
